@@ -4,6 +4,8 @@
 	<meta charset="utf-8">
 	<title>Ejercicio 02</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../_assets/css/style.css">
+	<script src="../_assets/js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 	<header class="header__main">
@@ -112,5 +114,27 @@
 	<footer class="footer__main">
 		<p class="footer__legal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sint praesentium laboriosam atque placeat architecto, maxime temporibus sequi veniam quae culpa accusantium dignissimos natus perferendis mollitia quam optio incidunt. Esse!</p>
 	</footer>
+
+	<script>
+		var pint = $("body article:nth-child(4) ul li:nth-child(4) a");
+		pint.text("Pinterest");
+		pint.prop('href', 'http://www.pinterest.com');
+
+		$("a[href='#']").on("click", function(event){
+			event.preventDefault()
+		});
+
+		$(".header__main h2").ready(function(){
+            var size = $(".header__main h2").css("font-size");
+            size = parseInt(size);
+            var new_size = size * 2;
+            $(".header__main h2").css("font-size",new_size+"px");
+        })
+
+
+
+
+	</script>
+
 </body>
 </html>
